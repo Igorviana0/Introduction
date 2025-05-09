@@ -1,0 +1,37 @@
+.galeria{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.centro{
+    text-align: center;
+}
+
+body{
+    background-color: #4d4d4d;
+  }
+
+  footer{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    background-color: #303030;
+    color: #ffffff;
+    font-weight: 0px;
+    padding: 1% 0% 1% 0%;
+}
+
+.logo{
+    text-align: center;
+    padding: 100px 0px 20px 0px;
+  }
+
+  h1{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
