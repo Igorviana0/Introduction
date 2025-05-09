@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="icon" href="Logo Introduce - 2.png">
+    <link rel="stylesheet" href="estilo-index.css">
+    <link rel="icon" href="LogoIntroduce-2.png">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            
+            <a href="cadastro.html" target="_blank">CADASTRO</a>
+            <a href="carros-a-venda.html" target="_blank">CARROS A VENDA</a>
+            <a href="galeria.html">CARROS</a>
+            <a href="#novidades">NOVIDADES</a>
+            <a href="#menu">MENU</a>
+        
+        </nav>
+
+    </header>
+
+    <div class="carrossel">
+        <div class="slides">
+            <div class="slide"><img src="imagens/McLaren.jpg" alt="Imagem 1"></div>
+            <div class="slide"><img src="imagens/Maserati.jpg" alt="Imagem 2"></div>
+            <div class="slide"><img src="Imagens/Koenigsegg Jesko Absolut.jpg" alt="Imagem 3"></div>
+            <div class="slide"><img src="imagens/Aston-Martin.jpg" alt="Imagem 4"></div>
+            <div class="slide"><img src="imagens/Pagani.jpg" alt="Imagem 4"></div>
+        </div>
+        <!-- Botão para cima -->
+        <button class="prev" onclick="mudarSlide(-1)">&#9650;</button>
+        <!-- Botão para baixo -->
+        <button class="next" onclick="mudarSlide(1)">&#9660;</button>
+    </div>
+    
+
+    <script>
+        let indiceSlide = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        let intervaloAuto = setInterval(() => mudarSlide(1), 4000); // Inicia a troca automática
+    
+        function mudarSlide(direcao) {
+            // Atualiza o índice do slide
+            indiceSlide += direcao;
+            if (indiceSlide >= totalSlides) {
+                indiceSlide = 0;
+            } else if (indiceSlide < 0) {
+                indiceSlide = totalSlides - 1;
+            }
+    
+            // Move os slides na vertical
+            slides.style.transform = `translateY(${-indiceSlide * 100}%)`;
+    
+            // Reinicia o temporizador ao clicar manualmente
+            reiniciarAutoSlide();
+        }
+    
+        function reiniciarAutoSlide() {
+            clearInterval(intervaloAuto); // Para o temporizador atual
+            intervaloAuto = setInterval(() => mudarSlide(1), 4000); // Inicia um novo temporizador
+        }
+    </script>
+    
+    <h1>Introduce</h1>
+    
+</head>
+    
+    <body>
+
+        <div class="imagem-container">
+            <div class="centro">
+                 <img src="Imagens/La-Ferrari.jpg" alt="Imagem 1" width="1000">
+            </div>
+           
+            <p>
+                A LaFerrari é um dos superesportivos mais icônicos já produzidos pela lendária fabricante italiana Ferrari. Lançada em 2013, a LaFerrari foi criada como um modelo de edição limitada, com apenas 499 unidades produzidas, além de uma versão adicional leiloada para fins beneficentes.
+
+                O nome "LaFerrari", que em italiano significa "A Ferrari", reflete a essência máxima da marca, combinando design futurista, engenharia de ponta e desempenho incomparável. Equipado com um motor V12 de 6.3 litros, que trabalha em conjunto com um sistema híbrido KERS (sistema de recuperação de energia cinética), o carro entrega impressionantes 963 cavalos de potência. Com isso, a LaFerrari é capaz de acelerar de 0 a 100 km/h em menos de 3 segundos e atingir uma velocidade máxima de 350 km/h.
+
+                Além da potência, a LaFerrari destaca-se por sua aerodinâmica avançada, utilizando materiais leves como fibra de carbono e tecnologia derivada da Fórmula 1. O design agressivo e elegante, com linhas aerodinâmicas e detalhes sofisticados, tornam o carro uma verdadeira obra de arte sobre rodas.
+
+                A LaFerrari não é apenas um marco na história da Ferrari, mas também um símbolo de inovação e exclusividade no mundo dos supercarros.
+            </p>
+            
+            <div class="centro">
+            <img src="Imagens/Lamborghini-Sian.jpg" alt="Imagem 2" width="1000">
+            </div>
+            
+            <p>
+                O Lamborghini Sián é um dos superesportivos mais inovadores e exclusivos já criados pela renomada fabricante italiana Lamborghini. Lançado em 2019, o Sián foi o primeiro carro híbrido da marca, marcando uma nova era de eletrificação para a empresa.
+
+                O Sián é equipado com um motor V12 de 6.5 litros, derivado do lendário Aventador, combinado com um sistema híbrido de 48 volts, que utiliza um supercapacitor em vez de uma bateria convencional. Essa tecnologia permite uma entrega instantânea de potência e uma resposta extremamente rápida, totalizando impressionantes 819 cavalos de potência. Com essa configuração, o Sián acelera de 0 a 100 km/h em apenas 2,8 segundos e atinge uma velocidade máxima de 350 km/h.
+
+                Seu design futurista e agressivo foi inspirado no clássico Lamborghini Countach, com linhas afiadas, entradas de ar marcantes e luzes em formato de "Y", características icônicas da marca. Além disso, o Sián conta com elementos aerodinâmicos avançados e materiais leves, como fibra de carbono, para maximizar o desempenho.
+
+                Com apenas 63 unidades produzidas, o Lamborghini Sián é uma verdadeira joia automotiva, combinando potência bruta, inovação tecnológica e exclusividade extrema.
+            </p>
+
+            <div class="centro">
+            <img src="Imagens/Bugatti Divo.jpg" alt="Imagem 3" width="1000">
+            </div>
+
+            <p>
+                O Bugatti Divo é um hipercarro de edição limitada produzido pela renomada fabricante francesa Bugatti. Lançado em 2018, o Divo foi projetado com foco em desempenho aerodinâmico e agilidade, sendo uma versão mais agressiva e exclusiva em comparação ao icônico Bugatti Chiron.
+
+                Equipado com o lendário motor W16 quadriturbo de 8.0 litros, o Divo entrega impressionantes 1.500 cavalos de potência. No entanto, diferentemente do Chiron, o Divo foi projetado para priorizar curvas e estabilidade, com um chassi mais leve e um sistema aerodinâmico aprimorado que gera 90 kg a mais de downforce.
+
+                Seu design futurista e agressivo é marcado por linhas afiadas, uma grande asa traseira fixa e entradas de ar funcionais, que garantem melhor resfriamento do motor e maior aderência nas pistas. O interior luxuoso e minimalista combina materiais de alta qualidade com detalhes inspirados na velocidade.
+
+                Com apenas 40 unidades produzidas em todo o mundo, o Bugatti Divo é um carro extremamente raro e cobiçado, sendo considerado uma verdadeira obra-prima automotiva que combina potência bruta, exclusividade e inovação.
+            </p>
+        </div>
+
+        
+    
+        <div class="centro">
+            <img src="Imagens/Rolls-Royce.jpg" alt="Imagem 4" width="1000">
+        </div>
+            
+            <p>
+                O Rolls-Royce Ghost Series II, lançado em 2014, é um sedã de luxo que combina design refinado, tecnologia avançada e desempenho impressionante. Com uma estética elegante e a icônica grade "Parthenon", ele oferece um interior luxuoso com materiais premium e tecnologia de ponta. Equipado com um motor V12 biturbo de 6.6 litros, entrega 563 cavalos de potência e 780 Nm de torque, proporcionando uma condução suave. Recursos de segurança avançados, como controle de cruzeiro adaptativo e câmeras de visão 360 graus, garantem uma experiência segura e tranquila. O Ghost Series II é a personificação do luxo e do conforto automotivo.
+            </p>
+            
+            <div class="centro">
+            <img src="Imagens/Bentley Continental.jpg" alt="Imagem 5" width="1000">
+            </div>
+            
+            <p>
+                O Bentley Continental GT é um grand tourer de luxo que combina elegância, desempenho e conforto. Com um design sofisticado e imponente, o veículo apresenta um interior luxuoso com materiais de alta qualidade, como couro, madeira e metal polido. Equipado com um motor W12 biturbo de 6.0 litros, ele entrega impressionantes 626 cavalos de potência e 900 Nm de torque, proporcionando uma aceleração suave e poderosa. A tecnologia avançada e os recursos de segurança garantem uma experiência de condução superior, tornando o Continental GT uma escolha ideal para quem busca exclusividade e performance.
+            </p>
+
+            <div class="centro">
+                <img src="Imagens/Mercedes AMG GT.jpg" alt="Imagem 6" width="1000">
+            </div>
+            
+            <p>
+                O Mercedes-AMG GT é um esportivo de alto desempenho que combina design agressivo, tecnologia avançada e potência impressionante. Com um motor V8 biturbo de 4.0 litros, ele entrega até 577 cavalos de potência e 700 Nm de torque, proporcionando uma aceleração rápida e uma condução dinâmica. O interior é luxuoso e esportivo, com materiais premium e tecnologia de ponta, como o sistema de infotainment MBUX. A aerodinâmica refinada e os sistemas de assistência ao motorista garantem uma experiência de condução emocionante e segura, tornando o AMG GT um ícone entre os carros esportivos. 
+            </p>
+        
+        </div>
+
+        <div class="centro">
+            <video src="Vídeo.mp4" width="768" height="432" controls=""></video>
+            
+            <iframe width="768" height="432" src="https://www.youtube.com/embed/28xfLZa-4aw?si=zw9SYcGDbdEkoo03" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+            </iframe>
+        </div>
+
+        <div>
+            <h3>Local</h3>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15301.91084558902!2d55.23945330773175!3d25.177236271245206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f694dd7853083%3A0xd2961e5bc8e7cf88!2sF1rst%20Motors!5e0!3m2!1spt-BR!2sbr!4v1741990870773!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>>
+            
+        </div>
+
+        <footer>
+            &copy; Introduce | 2025
+        </footer>
+
+
+    </body>
+
+</html>
